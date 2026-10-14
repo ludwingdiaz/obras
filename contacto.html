@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto y Presupuestos | Servicios Integrales SGM</title>
+    <meta
+      name="description"
+      content="Pide tu presupuesto sin compromiso para reformas, albañilería, pintura o fontanería en [Ciudad / Provincia]. ¡Te respondemos rápido!"
+    />
+
+    <!-- Bootstrap 5 CDN CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- HEADER / NAVBAR -->
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm"
+      >
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="index.html"
+            >Servicios Integrales SGM</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Cambiar navegación"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="proyectos.html">Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                <a
+                  class="btn btn-primary"
+                  href="https://wa.me/34644164231"
+                  target="_blank"
+                  rel="noopener"
+                  >Pedir presupuesto</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="py-5 mt-5">
+      <div class="container my-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="text-center mb-5">
+              <h1 class="fw-bold">Solicita tu Presupuesto</h1>
+              <p class="text-muted">
+                Cuéntanos qué necesitas. Te ofrecemos asesoramiento y
+                presupuesto gratuito sin compromiso.
+              </p>
+            </div>
+
+            <div class="card shadow-sm p-4 p-md-5">
+              <!-- Formulario con acción a FormSubmit apuntando a tu correo -->
+              <form
+                id="formPresupuesto"
+                action="https://formsubmit.co/serviciosintegralessgm1@gmail.com"
+                method="POST"
+              >
+                <!-- Configuración opcional para FormSubmit -->
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="Nuevo mensaje desde la web de Servicios Integrales SGM"
+                />
+                <input type="hidden" name="_captcha" value="false" />
+
+                <!-- Nombre -->
+                <div class="mb-3">
+                  <label for="nombre" class="form-label"
+                    >Nombre y Apellidos *</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nombre"
+                    name="nombre"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Por favor, introduce tu nombre.
+                  </div>
+                </div>
+
+                <!-- Teléfono y Correo -->
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="telefono" class="form-label">Teléfono *</label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="telefono"
+                      name="telefono"
+                      placeholder="Ej: 644164231"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Introduce un teléfono válido (mínimo 9 dígitos).
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label"
+                      >Correo Electrónico *</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      placeholder="tu@correo.com"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Introduce un correo electrónico válido.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Servicio y Ciudad/Zona -->
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="servicio" class="form-label"
+                      >Tipo de Servicio *</label
+                    >
+                    <select
+                      class="form-select"
+                      id="servicio"
+                      name="servicio"
+                      required
+                    >
+                      <option value="" disabled selected>
+                        Selecciona un servicio
+                      </option>
+                      <option value="Pintura y Alisado">
+                        Pintura y Alisado
+                      </option>
+                      <option value="Paredes, Pladur y Techos">
+                        Paredes, Pladur y Techos
+                      </option>
+                      <option value="Reformas Integrales">
+                        Reformas Integrales
+                      </option>
+                      <option value="Reformas de Baños y Cocinas">
+                        Reformas de Baños y Cocinas
+                      </option>
+                      <option value="Instalación de Suelos">
+                        Instalación de Suelos
+                      </option>
+                      <option value="Albañilería General">
+                        Albañilería General
+                      </option>
+                      <option value="Impermeabilización">
+                        Impermeabilización
+                      </option>
+                      <option value="Carpintería e Instalaciones">
+                        Carpintería e Instalaciones
+                      </option>
+                      <option value="Extras">Otros / Extras</option>
+                    </select>
+                    <div class="invalid-feedback">Selecciona un servicio.</div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="zona" class="form-label"
+                      >Ciudad o Zona de la Obra *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="zona"
+                      name="zona"
+                      placeholder="Ej: [Ciudad / Provincia]"
+                      required
+                    />
+                    <div class="invalid-feedback">Indica la ciudad o zona.</div>
+                  </div>
+                </div>
+
+                <!-- Descripción de la obra -->
+                <div class="mb-3">
+                  <label for="mensaje" class="form-label"
+                    >Descripción de la Obra / Proyecto *</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="mensaje"
+                    name="mensaje"
+                    rows="4"
+                    placeholder="Detalla metros cuadrados, estado actual, plazos deseados..."
+                    required
+                  ></textarea>
+                  <div class="invalid-feedback">
+                    Por favor, describe brevemente tu proyecto.
+                  </div>
+                </div>
+
+                <!-- Aceptación de Privacidad -->
+                <div class="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="privacidad"
+                    required
+                  />
+                  <label
+                    class="form-check-label small text-muted"
+                    for="privacidad"
+                  >
+                    He leído y acepto la
+                    <a href="#" target="_blank">política de privacidad</a> y el
+                    tratamiento de mis datos para gestionar esta solicitud.
+                  </label>
+                  <div class="invalid-feedback">
+                    Debes aceptar la política de privacidad.
+                  </div>
+                </div>
+
+                <!-- Alerta de éxito (Oculta por defecto) -->
+                <div
+                  id="alertaExito"
+                  class="alert alert-success d-none mb-3"
+                  role="alert"
+                >
+                  ¡Gracias! Tu mensaje ha sido procesado correctamente. Nos
+                  pondremos en contacto contigo muy pronto.
+                </div>
+
+                <!-- Botones de Acción -->
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                  <button
+                    type="submit"
+                    id="btnEnviarCorreo"
+                    class="btn btn-primary px-4 py-2"
+                  >
+                    Enviar por Correo
+                  </button>
+                  <button
+                    type="button"
+                    id="btnEnviarWhatsApp"
+                    class="btn btn-success px-4 py-2"
+                  >
+                    Enviar por WhatsApp
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a
+      href="https://wa.me/34644164231?text=Hola,%20me%20gustaría%20pedir%20más%20información%20sobre%20vuestros%20servicios%20de%20reformas."
+      class="whatsapp-float shadow"
+      target="_blank"
+      rel="noopener"
+      aria-label="Contactar por WhatsApp"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="currentColor"
+        class="bi bi-whatsapp"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.558 6.558 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.35.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.078.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+        />
+      </svg>
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container text-center text-secondary small">
+        &copy; 2026 Servicios Integrales SGM. Todos los derechos reservados.
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/formulario.js"></script>
+  </body>
+</html>

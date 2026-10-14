@@ -1,0 +1,129 @@
+[
+  {
+    "id": "pintura",
+    "nombre": "Pintura y Alisado",
+    "categoria": "Pintura",
+    "descripcion": "Pintura de interior y exterior, eliminación de gotelé, alisado de paredes y lacado de puertas o muebles.",
+    "cuandoConviene": "Ideal para renovar la luz de tu vivienda, preparar un piso para alquilar o eliminar el gotelé antiguo.",
+    "ventajas": "Acabados suaves, máxima luminosidad y renovación estética rápida con materiales lavables.",
+    "queIncluye": [
+      "Protección total de muebles y suelos",
+      "Alisado y reparación de desperfectos",
+      "Aplicación de pintura plástica de alta calidad",
+      "Limpieza exhaustiva tras la finalización"
+    ],
+    "imagen": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80",
+    "icono": "bi-paint-bucket"
+  },
+  {
+    "id": "paredes-techos",
+    "nombre": "Paredes, Pladur y Techos",
+    "categoria": "Paredes y techos",
+    "descripcion": "Tabiquería de pladur, falsos techos fijos y registrables, insonorización y reparación de grietas o humedades.",
+    "cuandoConviene": "Perfecto para dividir espacios sin obras pesadas, aislar acústicamente o instalar iluminación empotrada.",
+    "ventajas": "Montaje limpio, rapidez de ejecución y excelente aislamiento térmico y acústico.",
+    "queIncluye": [
+      "Instalación de perfilería y placas de cartón yeso",
+      "Aislamiento térmico y acústico",
+      "Enlucido y encintado de juntas",
+      "Reparación de filtraciones y humedades"
+    ],
+    "imagen": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
+    "icono": "bi-square-half"
+  },
+  {
+    "id": "reformas-integrales",
+    "nombre": "Reformas Integrales",
+    "categoria": "Reformas integrales",
+    "descripcion": "Transformación llave en mano de viviendas, pisos, locales comerciales y oficinas con coordinación técnica.",
+    "cuandoConviene": "Perfecto al comprar una vivienda antigua o querer redistribuir completamente los espacios de tu hogar.",
+    "ventajas": "Un único interlocutor para toda la obra, cumplimiento de plazos estrictos y acabados de primera.",
+    "queIncluye": [
+      "Diseño y redistribución de espacios",
+      "Demoliciones y retirada de escombros",
+      "Renovación completa de instalaciones",
+      "Acabados finales de máxima calidad"
+    ],
+    "imagen": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+    "icono": "bi-house-gear"
+  },
+  {
+    "id": "banos-cocinas",
+    "nombre": "Reformas de Baños y Cocinas",
+    "categoria": "Baños y cocinas",
+    "descripcion": "Sustitución de bañera por plato de ducha, alicatados, fontanería moderna y distribución funcional.",
+    "cuandoConviene": "Cuando buscas mayor accesibilidad en la ducha, ganar espacio o renovar tuberías antiguas.",
+    "ventajas": "Espacios modernos, accesibles, seguros y muy fáciles de limpiar.",
+    "queIncluye": [
+      "Cambio de bañera por ducha antideslizante",
+      "Alicatado de paredes y solado",
+      "Instalación de sanitarios y grifería",
+      "Montaje de mobiliario de cocina y baño"
+    ],
+    "imagen": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+    "icono": "bi-droplet"
+  },
+  {
+    "id": "suelos",
+    "nombre": "Instalación de Suelos",
+    "categoria": "Suelos",
+    "descripcion": "Colocación de tarima flotante, parquet, suelo porcelánico, rectificado y microcemento.",
+    "cuandoConviene": "Para dar un ambiente cálido a la vivienda o cambiar pavimentos desgastados sin levantar todo el suelo.",
+    "ventajas": "Suelos duraderos, elegantes, resistentes al tránsito y de fácil mantenimiento.",
+    "queIncluye": [
+      "Nivelación del suelo base",
+      "Instalación de aislante acústico / térmico",
+      "Colocación de rodapiés y remates",
+      "Tratamiento protector de superficie"
+    ],
+    "imagen": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
+    "icono": "bi-layers"
+  },
+  {
+    "id": "albanileria",
+    "nombre": "Albañilería General",
+    "categoria": "Albañilería",
+    "descripcion": "Construcción de tabiques, demoliciones, rozas, reformas de terrazas, patios y arreglos estructurales.",
+    "cuandoConviene": "Para reparaciones estructurales, tirar tabiques viejos, abrir pasos o acondicionar exteriores.",
+    "ventajas": "Estructuras sólidas construidas con técnica profesional y materiales resistentes.",
+    "queIncluye": [
+      "Construcción de muros y tabiquería",
+      "Apertura y tapado de rozas",
+      "Arreglo de grietas y enfoscados",
+      "Reformas de patios y jardines"
+    ],
+    "imagen": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80",
+    "icono": "bi-bricks"
+  },
+  {
+    "id": "impermeabilizacion",
+    "nombre": "Impermeabilización",
+    "categoria": "Impermeabilización",
+    "descripcion": "Soluciones definitivas para humedades y filtraciones en terrazas, cubiertas, tejados y cubiertas transitables.",
+    "cuandoConviene": "Antes de la temporada de lluvias o cuando detectes goteras, manchas de humedad o moho.",
+    "ventajas": "Protección total contra goteras, filtraciones y deterioro estructural de la vivienda.",
+    "queIncluye": [
+      "Aplicación de tela asfáltica y membranas líquidas",
+      "Impermeabilización de juntas de dilatación",
+      "Tratamiento antimoho y antihumedad",
+      "Pruebas de estanqueidad"
+    ],
+    "imagen": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
+    "icono": "bi-shield-check"
+  },
+  {
+    "id": "extras",
+    "nombre": "Carpintería e Instalaciones",
+    "categoria": "Extras",
+    "descripcion": "Montaje de puertas, armarios empotrados, ventanas, fontanería básica, electricidad y limpieza final de obra.",
+    "cuandoConviene": "Para rematar la obra, mejorar el aislamiento térmico con ventanas nuevas o instalar armarios a medida.",
+    "ventajas": "Detalles acabados a la perfección para entrar a disfrutar de tu hogar de inmediato.",
+    "queIncluye": [
+      "Montaje de puertas de paso y armarios",
+      "Puntos de luz, enchufes y fontanería",
+      "Limpieza profesional post-obra"
+    ],
+    "imagen": "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=800&q=80",
+    "icono": "bi-tools"
+  }
+]

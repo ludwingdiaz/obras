@@ -1,0 +1,38 @@
+[
+  {
+    "id": "proyecto-1",
+    "titulo": "Reforma Integral de Piso 90m²",
+    "categoria": "Reformas integrales",
+    "descripcion": "Renovación completa de distribución, cambio de solado, pintura lisa y baños nuevos.",
+    "imagen_antes": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
+    "imagen_despues": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+    "ubicacion": "[Barcelona / Barcelona]"
+  },
+  {
+    "id": "proyecto-2",
+    "titulo": "Cambio de Bañera por Plato de Ducha",
+    "categoria": "Baños y cocinas",
+    "descripcion": "Sustitución realizada en tiempo récord con mampara de cristal templado y plato antideslizante.",
+    "imagen_antes": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+    "imagen_despues": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80",
+    "ubicacion": "[Barcelona / Barcelona]"
+  },
+  {
+    "id": "proyecto-3",
+    "titulo": "Alisado de Gotelé y Pintura",
+    "categoria": "Pintura",
+    "descripcion": "Alisado total de paredes de salón y pasillo con acabado en pintura plástica lavable blanca.",
+    "imagen_antes": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80",
+    "imagen_despues": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
+    "ubicacion": "[Barcelona / Barcelona]"
+  },
+  {
+    "id": "proyecto-4",
+    "titulo": "Impermeabilización de Terraza",
+    "categoria": "Impermeabilización",
+    "descripcion": "Aplicación de caucho armado y tela asfáltica para erradicar filtraciones definitivas.",
+    "imagen_antes": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80",
+    "imagen_despues": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
+    "ubicacion": "[Barcelona / Barcelona]"
+  }
+]

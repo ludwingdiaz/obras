@@ -1,0 +1,279 @@
+/* Importar fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700&display=swap');
+
+/* Aplicación general de tipografías y colores /
+body {
+font-family: var(--font-body);
+color: var(--color-text);
+background-color: #ffffff;
+overflow-x: hidden;
+padding-top: 76px; / Espacio para el navbar fijo */
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+font-family: var(--font-heading);
+color: var(--color-heading);
+font-weight: 600;
+}
+
+/* Personalización de botones y acentos basados en variables */
+.btn-primary {
+background-color: var(--color-accent) !important;
+border-color: var(--color-accent) !important;
+color: #ffffff !important;
+font-weight: 500;
+transition: var(--transition-smooth);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+background-color: var(--color-accent-hover) !important;
+border-color: var(--color-accent-hover) !important;
+}
+
+.btn-outline-primary {
+color: var(--color-accent) !important;
+border-color: var(--color-accent) !important;
+}
+
+.btn-outline-primary:hover {
+background-color: var(--color-accent) !important;
+color: #ffffff !important;
+}
+
+/* Navbar sofisticada */
+.navbar {
+background-color: #ffffff !important;
+box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.navbar-brand {
+color: var(--bg-primary) !important;
+letter-spacing: -0.5px;
+}
+
+.nav-link {
+font-weight: 500;
+color: var(--color-text) !important;
+transition: var(--transition-smooth);
+}
+
+.nav-link:hover, .nav-link.active {
+color: var(--color-accent) !important;
+}
+
+/* Hero a pantalla completa con capa oscura */
+.hero {
+min-height: calc(90vh - 76px) !important;
+background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('../img/hero-obra.jpg') center/cover no-repeat !important;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #ffffff;
+}
+
+.hero h1 {
+color: #ffffff;
+}
+
+/* Tarjetas de servicios con sombra y efecto hover fluido */
+.card {
+border: none;
+border-radius: 8px;
+box-shadow: var(--shadow-card);
+transition: var(--transition-smooth);
+background-color: #ffffff;
+overflow: hidden;
+}
+
+.card:hover {
+transform: translateY(-5px);
+box-shadow: var(--shadow-hover);
+}
+
+.card img {
+transition: transform 0.5s ease;
+}
+
+.card:hover img {
+transform: scale(1.03);
+}
+
+/* Bloque de cifras clave */
+.stats-section {
+background-color: var(--bg-primary);
+color: #ffffff;
+}
+
+.stats-section h3, .stats-section p {
+color: #ffffff;
+}
+
+.stat-number {
+font-family: var(--font-heading);
+font-size: 2.75rem;
+font-weight: 700;
+color: var(--color-accent);
+}
+
+/* Estilos de pie de página (Footer) */
+footer {
+background-color: var(--bg-primary) !important;
+color: #cbd5e1;
+}
+
+footer h3 {
+color: #ffffff;
+}
+
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+
+/* =========================================================
+   Estilos de Interactividad (Fase 5)
+   ========================================================= */
+
+/* Transición de Navbar al hacer Scroll */
+.navbar-scrolled {
+  background-color: var(--dark-bg, #212529) !important;
+  transition: background-color 0.3s ease;
+}
+.navbar-scrolled .nav-link {
+  color: #ffffff !important;
+}
+
+/* Botón Flotante "Volver Arriba" */
+#backToTop {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  z-index: 999;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Comparador Antes / Después */
+.ba-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+}
+.ba-slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ba-slider .ba-before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  z-index: 2;
+  border-right: 3px solid var(--accent-color, #ffc107);
+}
+.ba-slider-range {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 3;
+  cursor: ew-resize;
+}
+
+
+/* Asegurar que las tarjetas y botones estén por encima de capas flotantes */
+.card-body {
+  position: relative;
+  z-index: 4;
+}
+.ba-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+}
+
+/* Corrección para GLightbox superposición y fondo */
+.glightbox-container {
+  z-index: 99999 !important;
+}
+.glightbox-container .gslide-image img {
+  max-height: 90vh !important;
+  object-fit: contain !important;
+}
+
+/* =========================================================
+   Transición suave para componentes cargados dinámicamente
+   ========================================================= */
+#navbar-container, #footer-container {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#navbar-container.loaded, #footer-container.loaded {
+  opacity: 1;
+}
+
+/* =========================================================
+   Botón Flotante de WhatsApp
+   ========================================================= */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #20ba5a;
+  color: #fff;
+}

@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyectos y Trabajos Realizados | Servicios Integrales SGM</title>
+    <meta
+      name="description"
+      content="Galería de reformas integrales, baños, cocinas y obras realizadas por Servicios Integrales SGM en [Ciudad / Provincia]. Transformaciones antes y después."
+    />
+
+    <!-- Bootstrap 5 CDN CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Librerías de Animación e Imágenes (Fase 5) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+
+    <!-- Estilos Propios -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Contenedor del Navbar (Cargado dinámicamente desde components/navbar.html) -->
+    <div id="navbar-container"></div>
+
+    <main class="mt-5 pt-4">
+      <!-- CABECERA DE PROYECTOS -->
+      <section
+        class="bg-dark text-white text-center py-5"
+        style="
+          background:
+            linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+            url(&quot;img/hero-obra.jpg&quot;) center/cover no-repeat;
+        "
+      >
+        <div class="container py-4" data-aos="fade-up">
+          <h1 class="display-4 fw-bold mb-3">Nuestros Proyectos</h1>
+          <p class="lead mb-0">
+            Explora la calidad de nuestras reformas y descubre el antes y
+            después de cada obra.
+          </p>
+        </div>
+      </section>
+
+      <!-- SECCIÓN DE GALERÍA Y FILTROS -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <!-- Botones de Filtro por Categoría -->
+          <div class="row mb-5">
+            <div class="col-12 text-center" data-aos="fade-up">
+              <div
+                id="contenedor-filtros-proyectos"
+                class="d-flex flex-wrap justify-content-center gap-2"
+              >
+                <button
+                  class="btn btn-primary active btn-filtro"
+                  data-categoria="todos"
+                >
+                  Todos los proyectos
+                </button>
+                <button
+                  class="btn btn-outline-primary btn-filtro"
+                  data-categoria="Reformas integrales"
+                >
+                  Reformas Integrales
+                </button>
+                <button
+                  class="btn btn-outline-primary btn-filtro"
+                  data-categoria="Baños y cocinas"
+                >
+                  Baños y Cocinas
+                </button>
+                <button
+                  class="btn btn-outline-primary btn-filtro"
+                  data-categoria="Pintura"
+                >
+                  Pintura
+                </button>
+                <button
+                  class="btn btn-outline-primary btn-filtro"
+                  data-categoria="Impermeabilización"
+                >
+                  Impermeabilización
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grid donde se inyectan los proyectos -->
+          <div class="row g-4" id="contenedor-proyectos">
+            <!-- Carga dinámica por JS -->
+            <div class="text-center py-5">
+              <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Cargando proyectos...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BANNER LLAMADA A LA ACCIÓN -->
+      <section class="py-5 bg-warning text-dark text-center">
+        <div class="container" data-aos="zoom-in">
+          <h2 class="fw-bold mb-3">
+            ¿Quieres transformar tu espacio de la misma manera?
+          </h2>
+          <p class="lead mb-4">
+            Pide tu presupuesto sin compromiso y hagamos realidad tu proyecto de
+            reforma.
+          </p>
+          <a href="contacto.html" class="btn btn-dark btn-lg px-5 fw-bold"
+            >Solicitar Presupuesto</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- Botón Flotante Volver Arriba -->
+    <button
+      id="backToTop"
+      class="btn btn-warning d-none shadow"
+      aria-label="Volver arriba"
+    >
+      ↑
+    </button>
+
+    <!-- Contenedor del Footer (Cargado dinámicamente desde components/footer.html) -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap 5 CDN JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Librerías CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+    <!-- Scripts Propios del Árbol -->
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- MODAL PARA VER FOTO AMPLIADA -->
+    <div
+      class="modal fade"
+      id="modalFotoAmpliada"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-dark border-0">
+          <div class="modal-header border-0">
+            <h5 class="modal-title text-white fw-bold" id="modalFotoTitulo">
+              Título del Proyecto
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body text-center p-0">
+            <img
+              id="modalFotoImg"
+              src=""
+              alt="Ampliación del proyecto"
+              class="img-fluid rounded shadow"
+              style="max-height: 80vh; width: 100%; object-fit: contain"
+            />
+          </div>
+          <div class="modal-footer border-0 justify-content-between">
+            <span id="modalFotoDesc" class="text-light small">Descripción</span>
+            <button
+              type="button"
+              class="btn btn-secondary btn-sm"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const contenedor = document.getElementById("contenedor-proyectos");
+        if (!contenedor) return;
+
+        try {
+          const response = await fetch("data/proyectos.json");
+          if (!response.ok) throw new Error("No se pudo cargar proyectos.json");
+          const proyectos = await response.json();
+
+          function renderizar(lista) {
+            contenedor.innerHTML = "";
+            if (lista.length === 0) {
+              contenedor.innerHTML = `<div class="col-12 text-center text-muted py-5"><p>No hay proyectos en esta categoría.</p></div>`;
+              return;
+            }
+
+            lista.forEach((p) => {
+              const col = document.createElement("div");
+              col.className = "col-md-6 col-lg-6";
+              col.setAttribute("data-aos", "fade-up");
+
+              col.innerHTML = `
+              <div class="card h-100 shadow-sm border-0">
+                <!-- Comparador Antes / Después -->
+                <div class="ba-slider">
+                  <img src="${p.imagen_despues}" alt="${p.titulo} Después">
+                  <div class="ba-before">
+                    <img src="${p.imagen_antes}" alt="${p.titulo} Antes">
+                  </div>
+                  <input type="range" min="0" max="100" value="50" class="ba-slider-range" aria-label="Deslizador antes y después">
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="badge bg-primary">${p.categoria}</span>
+                    <small class="text-muted"><i class="bi bi-geo-alt-fill text-danger me-1"></i>${p.ubicacion}</small>
+                  </div>
+                  <h3 class="h5 card-title fw-bold text-dark">${p.titulo}</h3>
+                  <p class="card-text text-muted small flex-grow-1">${p.descripcion}</p>
+                  <div class="d-flex gap-2 mt-3">
+                    <button type="button" class="btn btn-outline-dark btn-sm w-50 btn-ampliar" 
+                      data-img="${p.imagen_despues}" 
+                      data-titulo="${p.titulo}" 
+                      data-desc="${p.descripcion}">
+                      <i class="bi bi-zoom-in me-1"></i> Ver foto ampliada
+                    </button>
+                    <a href="contacto.html?servicio=${encodeURIComponent(p.categoria)}" class="btn btn-warning btn-sm fw-bold w-50 text-dark">
+                      Quiero algo así
+                    </a>
+                  </div>
+                </div>
+              </div>
+            `;
+              contenedor.appendChild(col);
+            });
+
+            activarSlidersAntesDespues();
+            configurarModalAmpliacion();
+          }
+
+          renderizar(proyectos);
+
+          // Sistema de Filtros
+          const botonesFiltro = document.querySelectorAll(
+            "#contenedor-filtros-proyectos .btn-filtro",
+          );
+          botonesFiltro.forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+              botonesFiltro.forEach((b) =>
+                b.classList.replace("btn-primary", "btn-outline-primary"),
+              );
+              e.target.classList.replace("btn-outline-primary", "btn-primary");
+
+              const categoria = e.target.getAttribute("data-categoria");
+              if (categoria === "todos") {
+                renderizar(proyectos);
+              } else {
+                renderizar(
+                  proyectos.filter(
+                    (item) =>
+                      item.categoria.toLowerCase() === categoria.toLowerCase(),
+                  ),
+                );
+              }
+            });
+          });
+        } catch (error) {
+          console.error("Error al cargar proyectos:", error);
+          contenedor.innerHTML = `<div class="col-12 text-center text-danger"><p>Error al cargar los proyectos recientes.</p></div>`;
+        }
+      });
+
+      function activarSlidersAntesDespues() {
+        const sliders = document.querySelectorAll(".ba-slider");
+        sliders.forEach((container) => {
+          const range = container.querySelector(".ba-slider-range");
+          const before = container.querySelector(".ba-before");
+          if (range && before) {
+            range.addEventListener("input", (e) => {
+              before.style.width = `${e.target.value}%`;
+            });
+          }
+        });
+      }
+
+      function configurarModalAmpliacion() {
+        const botonesAmpliar = document.querySelectorAll(".btn-ampliar");
+        botonesAmpliar.forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            const imgUrl = e.currentTarget.getAttribute("data-img");
+            const titulo = e.currentTarget.getAttribute("data-titulo");
+            const desc = e.currentTarget.getAttribute("data-desc");
+
+            document.getElementById("modalFotoTitulo").textContent = titulo;
+            document.getElementById("modalFotoImg").src = imgUrl;
+            document.getElementById("modalFotoDesc").textContent = desc;
+
+            const modalEl = document.getElementById("modalFotoAmpliada");
+            const modal = new bootstrap.Modal(modalEl);
+            modal.show();
+          });
+        });
+      }
+    </script>
+    <!-- SCRIPT DE RENDERIZADO Y GLIGHTBOX -->
+    <!-- SCRIPT DE RENDERIZADO Y GLIGHTBOX -->
+  </body>
+</html>
