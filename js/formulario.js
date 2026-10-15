@@ -22,14 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Validación de formulario
+  // Función de validación
   function validarFormularioCompleto(formulario) {
     const esValido = formulario.checkValidity();
     formulario.classList.add("was-validated");
     return esValido;
   }
 
-  // 2. Botón de Envío por WhatsApp formateado
+  // 2. Botón de Envío por WhatsApp
   const btnWhatsApp = document.getElementById("btnEnviarWhatsApp");
   if (btnWhatsApp) {
     btnWhatsApp.addEventListener("click", () => {
@@ -41,17 +41,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const zona = document.getElementById("zona").value.trim();
         const mensaje = document.getElementById("mensaje").value.trim();
 
-        // Formato visual y elegante para WhatsApp
-        const textoWhatsApp = `🏗️ *SOLICITUD DE PRESUPUESTO - SGM*
+        // Formato con códigos de escape Unicode seguros para emojis
+        const textoWhatsApp = `\u{1F3D7}\uFE0F *SOLICITUD DE PRESUPUESTO - SGM*
 ────────────────────────────
-👤 *Cliente:* ${nombre}
-📍 *Ubicación:* ${zona}
-🛠️ *Servicio solicitado:* ${servicio}
+\u{1F464} *Cliente:* ${nombre}
+\u{1F4CD} *Ubicación:* ${zona}
+\u{1F6E0}\uFE0F *Servicio solicitado:* ${servicio}
 
-📝 *Detalles de la obra:*
+\u{1F4DD} *Detalles de la obra:*
 "${mensaje}"
 
-📞 *Datos de contacto:*
+\u{1F4DE} *Datos de contacto:*
 • Teléfono: ${telefono}
 • Email: ${email}
 ────────────────────────────
