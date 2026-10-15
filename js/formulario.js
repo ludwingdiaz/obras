@@ -22,14 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Función de validación
+  // Funcion de validacion
   function validarFormularioCompleto(formulario) {
     const esValido = formulario.checkValidity();
     formulario.classList.add("was-validated");
     return esValido;
   }
 
-  // 2. Botón de Envío por WhatsApp
+  // 2. Boton de Envio por WhatsApp sin tildes ni caracteres que rompan la codificacion
   const btnWhatsApp = document.getElementById("btnEnviarWhatsApp");
   if (btnWhatsApp) {
     btnWhatsApp.addEventListener("click", () => {
@@ -41,21 +41,20 @@ document.addEventListener("DOMContentLoaded", () => {
         const zona = document.getElementById("zona").value.trim();
         const mensaje = document.getElementById("mensaje").value.trim();
 
-        // Emojis directos (funcionarán perfecto ahora que el archivo está en UTF-8)
-        const textoWhatsApp = `🏗️ *SOLICITUD DE PRESUPUESTO - SGM*
-────────────────────────────
-👤 *Cliente:* ${nombre}
-📍 *Ubicación:* ${zona}
-🛠️ *Servicio solicitado:* ${servicio}
+        const textoWhatsApp = `SOLICITUD DE PRESUPUESTO - SGM
+----------------------------------------
+Cliente: ${nombre}
+Ubicacion: ${zona}
+Servicio: ${servicio}
 
-📝 *Detalles de la obra:*
+Detalles del proyecto:
 "${mensaje}"
 
-📞 *Datos de contacto:*
-• Teléfono: ${telefono}
-• Email: ${email}
-────────────────────────────
-_Mensaje enviado desde la web corporativa_`;
+Datos de contacto:
+- Telefono: ${telefono}
+- Email: ${email}
+----------------------------------------
+Mensaje enviado desde la web corporativa`;
 
         const telefonoEmpresa = "34644164231";
         const urlWa = `https://wa.me/${telefonoEmpresa}?text=${encodeURIComponent(textoWhatsApp)}`;
@@ -65,7 +64,7 @@ _Mensaje enviado desde la web corporativa_`;
     });
   }
 
-  // 3. Envío por Correo
+  // 3. Envio por Correo
   form.addEventListener("submit", (e) => {
     if (!validarFormularioCompleto(form)) {
       e.preventDefault();
