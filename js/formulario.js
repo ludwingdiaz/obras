@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return esValido;
   }
 
-  // 2. Botón de Envío por WhatsApp con emojis seguros
+  // 2. Botón de Envío por WhatsApp
   const btnWhatsApp = document.getElementById("btnEnviarWhatsApp");
   if (btnWhatsApp) {
     btnWhatsApp.addEventListener("click", () => {
@@ -41,24 +41,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const zona = document.getElementById("zona").value.trim();
         const mensaje = document.getElementById("mensaje").value.trim();
 
-        // Generación de emojis mediante códigos seguros (cero errores de codificación)
-        const edificio = String.fromCodePoint(0x1f3d7); // 🏗️
-        const persona = String.fromCodePoint(0x1f464); // 👤
-        const pin = String.fromCodePoint(0x1f4cd); // 📍
-        const herramienta = String.fromCodePoint(0x1f6e0); // 🛠️
-        const nota = String.fromCodePoint(0x1f4dd); // 📝
-        const telefonoIcon = String.fromCodePoint(0x1f4de); // 📞
-
-        const textoWhatsApp = `${edificio} *SOLICITUD DE PRESUPUESTO - SGM*
+        // Emojis directos (funcionarán perfecto ahora que el archivo está en UTF-8)
+        const textoWhatsApp = `🏗️ *SOLICITUD DE PRESUPUESTO - SGM*
 ────────────────────────────
-${persona} *Cliente:* ${nombre}
-${pin} *Ubicación:* ${zona}
-${herramienta} *Servicio solicitado:* ${servicio}
+👤 *Cliente:* ${nombre}
+📍 *Ubicación:* ${zona}
+🛠️ *Servicio solicitado:* ${servicio}
 
-${nota} *Detalles de la obra:*
+📝 *Detalles de la obra:*
 "${mensaje}"
 
-${telefonoIcon} *Datos de contacto:*
+📞 *Datos de contacto:*
 • Teléfono: ${telefono}
 • Email: ${email}
 ────────────────────────────
