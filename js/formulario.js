@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return esValido;
   }
 
-  // 2. Boton de Envio por WhatsApp sin tildes ni caracteres que rompan la codificacion
+  // 2. Boton de Envio por WhatsApp con emojis seguros mediante codigos Unicode
   const btnWhatsApp = document.getElementById("btnEnviarWhatsApp");
   if (btnWhatsApp) {
     btnWhatsApp.addEventListener("click", () => {
@@ -41,20 +41,21 @@ document.addEventListener("DOMContentLoaded", () => {
         const zona = document.getElementById("zona").value.trim();
         const mensaje = document.getElementById("mensaje").value.trim();
 
-        const textoWhatsApp = `SOLICITUD DE PRESUPUESTO - SGM
+        // Emojis seguros codificados en Unicode para evitar corrupcion en Windows
+        const textoWhatsApp = `\u{1F3D7}\uFE0F *SOLICITUD DE PRESUPUESTO - SGM*
 ----------------------------------------
-Cliente: ${nombre}
-Ubicacion: ${zona}
-Servicio: ${servicio}
+\u{1F464} *Cliente:* ${nombre}
+\u{1F4CD} *Ubicacion:* ${zona}
+\u{1F6E0}\uFE0F *Servicio:* ${servicio}
 
-Detalles del proyecto:
+\u{1F4DD} *Detalles del proyecto:*
 "${mensaje}"
 
-Datos de contacto:
+\u{1F4DE} *Datos de contacto:*
 - Telefono: ${telefono}
 - Email: ${email}
 ----------------------------------------
-Mensaje enviado desde la web corporativa`;
+_Mensaje enviado desde la web corporativa_`;
 
         const telefonoEmpresa = "34644164231";
         const urlWa = `https://wa.me/${telefonoEmpresa}?text=${encodeURIComponent(textoWhatsApp)}`;
