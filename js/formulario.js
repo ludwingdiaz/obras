@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return esValido;
   }
 
-  // 2. Boton de Envio por WhatsApp con emojis seguros mediante codigos Unicode
+  // 2. Boton de Envio por WhatsApp con emojis mediante codigos hexadecimales seguros (\uXXXX)
   const btnWhatsApp = document.getElementById("btnEnviarWhatsApp");
   if (btnWhatsApp) {
     btnWhatsApp.addEventListener("click", () => {
@@ -41,17 +41,24 @@ document.addEventListener("DOMContentLoaded", () => {
         const zona = document.getElementById("zona").value.trim();
         const mensaje = document.getElementById("mensaje").value.trim();
 
-        // Emojis seguros codificados en Unicode para evitar corrupcion en Windows
-        const textoWhatsApp = `\u{1F3D7}\uFE0F *SOLICITUD DE PRESUPUESTO - SGM*
-----------------------------------------
-\u{1F464} *Cliente:* ${nombre}
-\u{1F4CD} *Ubicacion:* ${zona}
-\u{1F6E0}\uFE0F *Servicio:* ${servicio}
+        // Iconos con codificacion segura para navegadores
+        const iconoObra = "\uD83C\uDFD7"; // 🏗️
+        const iconoCliente = "\uD83D\uDC64"; // 👤
+        const iconoUbicacion = "\uD83D\uDCCD"; // 📍
+        const iconoServicio = "\uD83D\uDEE0"; // 🛠️
+        const iconoNota = "\uD83D\uDCDD"; // 📝
+        const iconoTelefono = "\uD83D\uDCDE"; // 📞
 
-\u{1F4DD} *Detalles del proyecto:*
+        const textoWhatsApp = `${iconoObra} *SOLICITUD DE PRESUPUESTO - SGM*
+----------------------------------------
+${iconoCliente} *Cliente:* ${nombre}
+${iconoUbicacion} *Ubicacion:* ${zona}
+${iconoServicio} *Servicio:* ${servicio}
+
+${iconoNota} *Detalles del proyecto:*
 "${mensaje}"
 
-\u{1F4DE} *Datos de contacto:*
+${iconoTelefono} *Datos de contacto:*
 - Telefono: ${telefono}
 - Email: ${email}
 ----------------------------------------
