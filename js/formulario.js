@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return esValido;
   }
 
-  // 2. Boton de Envio por WhatsApp con emojis mediante codigos hexadecimales seguros (\uXXXX)
+  // 2. Boton de Envio por WhatsApp con numeros decimales seguros (Cero errores en Windows)
   const btnWhatsApp = document.getElementById("btnEnviarWhatsApp");
   if (btnWhatsApp) {
     btnWhatsApp.addEventListener("click", () => {
@@ -41,24 +41,24 @@ document.addEventListener("DOMContentLoaded", () => {
         const zona = document.getElementById("zona").value.trim();
         const mensaje = document.getElementById("mensaje").value.trim();
 
-        // Iconos con codificacion segura para navegadores
-        const iconoObra = "\uD83C\uDFD7"; // 🏗️
-        const iconoCliente = "\uD83D\uDC64"; // 👤
-        const iconoUbicacion = "\uD83D\uDCCD"; // 📍
-        const iconoServicio = "\uD83D\uDEE0"; // 🛠️
-        const iconoNota = "\uD83D\uDCDD"; // 📝
-        const iconoTelefono = "\uD83D\uDCDE"; // 📞
+        // Emojis generados mediante numeros decimales puros (imunes a la codificacion ANSI/Windows)
+        const emojiObra = String.fromCodePoint(127959); // 🏗️
+        const emojiCliente = String.fromCodePoint(128100); // 👤
+        const emojiUbicacion = String.fromCodePoint(128205); // 📍
+        const emojiServicio = String.fromCodePoint(128736); // 🛠️
+        const emojiNota = String.fromCodePoint(128221); // 📝
+        const emojiTelefono = String.fromCodePoint(128222); // 📞
 
-        const textoWhatsApp = `${iconoObra} *SOLICITUD DE PRESUPUESTO - SGM*
+        const textoWhatsApp = `${emojiObra} *SOLICITUD DE PRESUPUESTO - SGM*
 ----------------------------------------
-${iconoCliente} *Cliente:* ${nombre}
-${iconoUbicacion} *Ubicacion:* ${zona}
-${iconoServicio} *Servicio:* ${servicio}
+${emojiCliente} *Cliente:* ${nombre}
+${emojiUbicacion} *Ubicacion:* ${zona}
+${emojiServicio} *Servicio:* ${servicio}
 
-${iconoNota} *Detalles del proyecto:*
+${emojiNota} *Detalles del proyecto:*
 "${mensaje}"
 
-${iconoTelefono} *Datos de contacto:*
+${emojiTelefono} *Datos de contacto:*
 - Telefono: ${telefono}
 - Email: ${email}
 ----------------------------------------
