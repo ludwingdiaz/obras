@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return esValido;
   }
 
-  // 2. Boton de Envio por WhatsApp con numeros decimales seguros (Cero errores en Windows)
+  // 2. Boton de Envio por WhatsApp con formato limpio y profesional
   const btnWhatsApp = document.getElementById("btnEnviarWhatsApp");
   if (btnWhatsApp) {
     btnWhatsApp.addEventListener("click", () => {
@@ -41,31 +41,28 @@ document.addEventListener("DOMContentLoaded", () => {
         const zona = document.getElementById("zona").value.trim();
         const mensaje = document.getElementById("mensaje").value.trim();
 
-        // Emojis generados mediante numeros decimales puros (imunes a la codificacion ANSI/Windows)
-        const emojiObra = String.fromCodePoint(127959); // 🏗️
-        const emojiCliente = String.fromCodePoint(128100); // 👤
-        const emojiUbicacion = String.fromCodePoint(128205); // 📍
-        const emojiServicio = String.fromCodePoint(128736); // 🛠️
-        const emojiNota = String.fromCodePoint(128221); // 📝
-        const emojiTelefono = String.fromCodePoint(128222); // 📞
-
-        const textoWhatsApp = `${emojiObra} *SOLICITUD DE PRESUPUESTO - SGM*
+        // Diseño corporativo limpio, moderno y 100% compatible sin fallos de codificacion
+        const textoWhatsApp = `[ PRESUPUESTO - SERVICIOS SGM ]
 ----------------------------------------
-${emojiCliente} *Cliente:* ${nombre}
-${emojiUbicacion} *Ubicacion:* ${zona}
-${emojiServicio} *Servicio:* ${servicio}
+> CLIENTE: ${nombre}
+> UBICACION: ${zona}
+> SERVICIO: ${servicio}
 
-${emojiNota} *Detalles del proyecto:*
+[ DETALLES DEL PROYECTO ]
 "${mensaje}"
 
-${emojiTelefono} *Datos de contacto:*
-- Telefono: ${telefono}
-- Email: ${email}
+[ DATOS DE CONTACTO ]
+* Telefono: ${telefono}
+* Email: ${email}
 ----------------------------------------
 _Mensaje enviado desde la web corporativa_`;
 
         const telefonoEmpresa = "34644164231";
-        const urlWa = `https://wa.me/${telefonoEmpresa}?text=${encodeURIComponent(textoWhatsApp)}`;
+        const urlWa =
+          "https://wa.me/" +
+          telefonoEmpresa +
+          "?text=" +
+          encodeURIComponent(textoWhatsApp);
 
         window.open(urlWa, "_blank");
       }
