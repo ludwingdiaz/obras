@@ -41,20 +41,22 @@ document.addEventListener("DOMContentLoaded", () => {
         const zona = document.getElementById("zona").value.trim();
         const mensaje = document.getElementById("mensaje").value.trim();
 
-        // Formato con códigos de escape Unicode seguros para emojis
-        const textoWhatsApp = `\u{1F3D7}\uFE0F *SOLICITUD DE PRESUPUESTO - SGM*
-────────────────────────────
-\u{1F464} *Cliente:* ${nombre}
-\u{1F4CD} *Ubicación:* ${zona}
-\u{1F6E0}\uFE0F *Servicio solicitado:* ${servicio}
+        // Formato ultra-compatible (cero errores de codificación)
+        const textoWhatsApp = `[ PRESUPUESTO - SERVICIOS INTEGRALES SGM ]
+==========================================
 
-\u{1F4DD} *Detalles de la obra:*
+*CLIENTE:* ${nombre}
+*UBICACIÓN:* ${zona}
+*SERVICIO:* ${servicio}
+
+*DETALLES DE LA OBRA:*
 "${mensaje}"
 
-\u{1F4DE} *Datos de contacto:*
-• Teléfono: ${telefono}
-• Email: ${email}
-────────────────────────────
+*DATOS DE CONTACTO:*
+- Teléfono: ${telefono}
+- Email: ${email}
+
+==========================================
 _Mensaje enviado desde la web corporativa_`;
 
         const telefonoEmpresa = "34644164231";
