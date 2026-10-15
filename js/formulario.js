@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return esValido;
   }
 
-  // 2. Botón de Envío por WhatsApp
+  // 2. Botón de Envío por WhatsApp con emojis seguros
   const btnWhatsApp = document.getElementById("btnEnviarWhatsApp");
   if (btnWhatsApp) {
     btnWhatsApp.addEventListener("click", () => {
@@ -41,22 +41,27 @@ document.addEventListener("DOMContentLoaded", () => {
         const zona = document.getElementById("zona").value.trim();
         const mensaje = document.getElementById("mensaje").value.trim();
 
-        // Formato ultra-compatible (cero errores de codificación)
-        const textoWhatsApp = `[ PRESUPUESTO - SERVICIOS INTEGRALES SGM ]
-==========================================
+        // Generación de emojis mediante códigos seguros (cero errores de codificación)
+        const edificio = String.fromCodePoint(0x1f3d7); // 🏗️
+        const persona = String.fromCodePoint(0x1f464); // 👤
+        const pin = String.fromCodePoint(0x1f4cd); // 📍
+        const herramienta = String.fromCodePoint(0x1f6e0); // 🛠️
+        const nota = String.fromCodePoint(0x1f4dd); // 📝
+        const telefonoIcon = String.fromCodePoint(0x1f4de); // 📞
 
-*CLIENTE:* ${nombre}
-*UBICACIÓN:* ${zona}
-*SERVICIO:* ${servicio}
+        const textoWhatsApp = `${edificio} *SOLICITUD DE PRESUPUESTO - SGM*
+────────────────────────────
+${persona} *Cliente:* ${nombre}
+${pin} *Ubicación:* ${zona}
+${herramienta} *Servicio solicitado:* ${servicio}
 
-*DETALLES DE LA OBRA:*
+${nota} *Detalles de la obra:*
 "${mensaje}"
 
-*DATOS DE CONTACTO:*
-- Teléfono: ${telefono}
-- Email: ${email}
-
-==========================================
+${telefonoIcon} *Datos de contacto:*
+• Teléfono: ${telefono}
+• Email: ${email}
+────────────────────────────
 _Mensaje enviado desde la web corporativa_`;
 
         const telefonoEmpresa = "34644164231";
